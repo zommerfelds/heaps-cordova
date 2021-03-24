@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- https://heaps.io/documentation/html5.html -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+
+    <!-- don't allow caching (for livereload to always load the newest version) -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- no favicon -->
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>App demo</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NOTE: the width and height style elements must be defined directly in the element
+               below (not in a class) because otherwise Heaps doesn't resize the canvas properly. -->
+    <canvas id="webgl" style="width:100%;height:100%"></canvas>
+    <script type="text/javascript" src="build/game.js"></script>
+</body>
+
+</html>
