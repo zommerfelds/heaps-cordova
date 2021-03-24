@@ -1,7 +1,5 @@
 name: CI
 
-# Note: this action won't run properly unless secrets are setup
-
 # Controls when the action will run. 
 on:
   push:
@@ -46,10 +44,12 @@ jobs:
         name: Execute Docker build
         uses: docker/build-push-action@v2
         with:
-          target: upload-to-play
+          target: cordova-output-unsigned
+
           context: . # This is needed because this action will otherwise checkout a new separate repo (without LFS)
                      # https://stackoverflow.com/questions/66303185/docker-copy-fails-github-actions-with-git-lfs
-          secrets: |
-            "keystore-base64=${{ secrets.ANDROID_KEYSTORE }}"
-            "keystore-password=${{ secrets.ANDROID_KEYSTORE_PASSWORD }}"
-            "service-account=${{ secrets.PLAY_SERVICE_ACCOUNT }}"
+          # Use the below secrets for signed APK and upload to Google Play
+          #secrets: |
+          #  "keystore-base64=${{ secrets.ANDROID_KEYSTORE }}"
+          #  "keystore-password=${{ secrets.ANDROID_KEYSTORE_PASSWORD }}"
+          #  "service-account=${{ secrets.PLAY_SERVICE_ACCOUNT }}"
