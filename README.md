@@ -1,6 +1,6 @@
 # Heaps + Cordova
 
-This demo showcases how to setup a basic Heaps Android app. This uses:
+This demo showcases how to setup a basic Android app using [Heaps](https://heaps.io/) and [Cordova](https://cordova.apache.org/). This uses:
 
 * Heaps for building an HTML5 package
 * Cordova for generating a WebView based app (Android Studio not needed)
@@ -9,8 +9,9 @@ This demo showcases how to setup a basic Heaps Android app. This uses:
 Notes:
 
 * Feel free to commend by opening an issue on Github!
-* Compiling Heaps to native code and building an Android app is harder, but so far I'm happy with the performance of the WebView approach.
-* Cordova supports iOS so this should work with not much change. Feel free to contribute if you have an iPhone.
+* Compiling Heaps to native code and building using NDK seems hard, but so far I'm happy with the performance of the WebView approach.
+* Cordova supports iOS too so this demo should work without much change. Feel free to contribute if you have an iPhone.
+* It would be nice to extend this demo to use more Cordova features like for example the accelerometer.
 
 ## Option 1: use Docker
 
@@ -22,7 +23,7 @@ The provided Dockerfile can build the entire app in one go, so feel free to skip
 ```
 docker buildx build --target haxe-output --output build --progress plain .
 ```
-This will produce a `build/` output. You can test it by opening `index.html` in the root folder.
+This will produce a `build/` output. Before even having an app, you can develop and test it on your computer by opening `index.html` in the root folder.
 
 ### Build the debug APK
 ```
