@@ -1,14 +1,14 @@
 # Heaps + Cordova
 
-This demo showcases how to setup a basic Android app using [Heaps](https://heaps.io/) and [Cordova](https://cordova.apache.org/). This uses:
+This demo showcases how to setup the [Heaps game engine](https://heaps.io/) to run on Android using [Cordova](https://cordova.apache.org/). This uses:
 
-* Heaps for building an HTML5 package
-* Cordova for generating a WebView based app (Android Studio not needed)
+* Heaps for building an HTML5 app
+* Cordova for wrapping that app into an APK file (Android Studio not needed)
 * Optional: Docker to automate the entire setup
 
 Notes:
 
-* Feel free to commend by opening an issue on Github!
+* Feel free to comment by opening an issue on Github!
 * Compiling Heaps to native code and building using NDK seems hard, but so far I'm happy with the performance of the WebView approach.
 * Cordova supports iOS too so this demo should work without much change. Feel free to contribute if you have an iPhone.
 * It would be nice to extend this demo to use more Cordova features like for example the accelerometer.
