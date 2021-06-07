@@ -1,7 +1,0 @@
--cp src
--main App
-
--lib heaps:1.9.0
-
--D resourcesPath=./res/heaps
--js build/game.js
